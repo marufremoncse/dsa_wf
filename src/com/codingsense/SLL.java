@@ -107,8 +107,21 @@ public class SLL<T> {
 		return false;
 	}
 
-	void indexOf(Node node) {
-
+	int indexOf(T data) {
+		int index = -1;
+		if(head==null) {
+			return index;
+		}
+		Node temp = head;
+		while(temp!=null) {
+			++index;
+			if(temp.data.equals(data)) {
+				return index;
+			}
+			temp = temp.next;
+		}
+		
+		return -1;
 	}
 
 	Node get(int index) {

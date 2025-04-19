@@ -11,6 +11,8 @@ public class Main {
 		sll.insertAtPosition(7, 4);
 		sll.delete(3);
 		
+		System.out.println("index: " + sll.indexOf(11));
+		
 		System.out.println(sll.size());
 		sll.printList();
 	}
