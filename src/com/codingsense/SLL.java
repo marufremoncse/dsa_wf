@@ -49,8 +49,25 @@ public class SLL<T> {
 
 	}
 
-	void insertAtPosition(int index) {
-
+	void insertAtPosition(T data, int index) {
+		if(index<0 || index>size) {
+			System.out.println("Invalid index");
+			return;
+		}
+		Node node = new Node(data);
+		if(index==0) {
+			node.next = head;
+			head = node;
+			size++;
+			return;
+		}
+		Node temp = head;
+		while(--index>0) {
+			temp = temp.next;
+		}
+		node.next = temp.next;
+		temp.next = node;
+		size++;
 	}
 
 	void delete(T data) {

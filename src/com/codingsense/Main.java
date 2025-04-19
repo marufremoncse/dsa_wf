@@ -8,6 +8,7 @@ public class Main {
 		sll.insert(5);
 		sll.insert(6);
 		
+		sll.insertAtPosition(7, 4);
 		sll.delete(3);
 		
 		System.out.println(sll.size());
