@@ -38,6 +38,7 @@ public class DLL<T> {
 			tail = node;
 		} else {
 			tail.next = node;
+			node.prev = tail;
 			tail = node;
 		}
 		size++;
@@ -114,7 +115,7 @@ public class DLL<T> {
 		if(head==null) {
 			return index;
 		}
-		Node temp = head;
+		DLLNode temp = head;
 		while(temp!=null) {
 			++index;
 			if(temp.data.equals(data)) {
@@ -126,15 +127,23 @@ public class DLL<T> {
 		return -1;
 	}
 
-	Node get(int index) {
+	DLLNode get(int index) {
 		return null;
 	}
 
-	void printList() {
-		Node temp = head;
+	void traverseForward() {
+		DLLNode temp = head;
 		while(temp!=null) {
 			System.out.print(temp.data + " ");
 			temp = temp.next;
+		}
+	}
+	
+	void traverseBackward() {
+		DLLNode temp = tail;
+		while(temp!=null) {
+			System.out.print(temp.data + " ");
+			temp = temp.prev;
 		}
 	}
 
