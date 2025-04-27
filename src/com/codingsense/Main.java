@@ -34,13 +34,24 @@ public class Main {
 //		System.out.println();
 //		dll.traverseBackward();
 		
-		Stack<Integer> stack = new Stack<>();
-		stack.push(1);
-		stack.push(2);
-		stack.push(3);
-		stack.push(4);
+//		Stack<Integer> stack = new Stack<>();
+//		stack.push(1);
+//		stack.push(2);
+//		stack.push(3);
+//		stack.push(4);
+//		
+//		Iterator<Integer> iterator = stack.iterator();
+//		while(iterator.hasNext()) {
+//			System.out.println(iterator.next());
+//		}
 		
-		Iterator<Integer> iterator = stack.iterator();
+		Queue<Integer> queue = new Queue();
+		queue.enqueue(1);
+		queue.enqueue(2);
+		queue.enqueue(3);
+		queue.enqueue(4);
+		
+		Iterator<Integer> iterator = queue.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
